@@ -19,7 +19,15 @@
 // Если вы не умеете применять принципы ООП, не начинайте задание
 // Если вы не готовы тратить время на задачу, говорите об этом сразу и не приступайте к выполнению.
 
+import child_process from 'node:child_process';
+
 class Service {
+    public transport;
+    public cluster;
+    public isMaster;
+    public isClusterMode;
+    public clusterOptions;
+    
     constructor(options) {
         this.transport = options.transport;
         this.isClusterMode = !!options.cluster;
